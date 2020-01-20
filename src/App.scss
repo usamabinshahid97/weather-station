@@ -1,0 +1,211 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.google-places-autocomplete {
+	width: auto !important;
+	position: absolute !important;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.button {
+	border:2px solid rgba(255,255,255,.5);
+	font-size:1.35em;
+	padding:.25em .5em .3125em;
+	color:rgba(255,255,255,.5);
+	border-radius:.25em;
+	background-color: brown;
+	transition:all .100s;
+	text-align: center;
+	text-decoration: none;
+	margin-left: 351px;
+	cursor: pointer;
+
+	.button5 {
+		background-color: white;
+		color: black;
+		border: 2px solid #555555;
+	}
+}
+
+.search-bar {
+	margin-top: 70px;
+}
+
+.container {
+	margin-top: 80px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	.weather-cards {
+		cursor: pointer;
+		box-sizing: content-box;
+		width: auto;
+		height: 100px;
+		.text {
+			font-weight: 700;
+			font-size: 14px;
+			color: white;
+			margin-top: -10px;
+			white-space:pre;
+		}
+	}
+}
+
+.card-detail {
+	animation: fade-in 1s;
+	box-sizing: content-box;
+	width: 100%;
+	margin-top: 60px;
+	height: 367px;
+	position: absolute;
+	border-radius:.25em;
+	backdrop-filter: blur(2px);
+	backdrop-filter: brightness(60%);
+	backdrop-filter: contrast(40%);
+	backdrop-filter: drop-shadow(4px 4px 10px red);
+	backdrop-filter: grayscale(30%);
+	backdrop-filter: hue-rotate(120deg);
+	backdrop-filter: invert(70%);
+	backdrop-filter: opacity(20%);
+	backdrop-filter: sepia(90%);
+	backdrop-filter: saturate(60%);
+}
+
+.weather-detail-text {
+	position: absolute;
+	margin-top: 60px;
+	width: 100%;
+	box-sizing: content-box;
+	height: 294px;
+
+	.summary {
+		margin-top: 50px;
+		color: gold;
+		font-size: 20px;
+		font-weight: 800;
+		font-style: italic;
+	}
+
+	.sunrise-sunset {
+		display: flex;
+		justify-content: space-evenly;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+		margin-top: 1.5rem;
+	}
+
+	.splitter {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 3.5rem;
+	}
+
+	.text {
+		text-align: initial;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+
+		.value-text {
+			color: lightgrey;
+			font-size: 16px;
+			font-weight: 600;
+		}
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.weather-cards:focus-within {
+	transform: scale(1.4);
+	transition: 0.5s;
+	outline: none;
+}
+
+.input {
+	
+	border:2px solid rgba(255,255,255,.5);
+	font-size:1.35em;
+	padding:.25em .5em .3125em;
+	color:rgba(255,255,255,.5);
+	border-radius:.25em;
+	background:transparent;
+	transition:all .100s;
+	
+	&:focus{
+		outline:none;
+		color:rgba(255,255,255,.75);
+		border-color:rgba(255,255,255,.75);
+	}
+	
+	&.keyup {
+		color:white;
+		border-color:white;
+		text-shadow:0 0 .125em white;
+		box-shadow:0 0 .25em white,inset 0 0 .25em white;
+	}
+}
+
+$placeholder-color:rgba(255,255,255,.5);
+
+::-webkit-input-placeholder {
+	color:$placeholder-color;
+	text-shadow:0 0 .125em transparent;
+	transition:all .25s;
+}
+input:focus::-webkit-input-placeholder {
+	opacity:.5;
+}
+
+::-moz-placeholder {
+	color:$placeholder-color;
+	text-shadow:0 0 .125em transparent;
+	transition:all .25s;
+}
+input:focus::-moz-placeholder {
+	opacity:.5;
+}
+
+:-ms-input-placeholder {
+	color:$placeholder-color;
+	text-shadow:0 0 .125em transparent;
+	transition:all .25s;
+}
+input:focus:-ms-input-placeholder {
+	opacity:.5;
+}
+
+body {
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+}
+
+.App-link {
+  color: #09d3ac;
+}
